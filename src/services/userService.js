@@ -11,7 +11,7 @@ require('express-async-errors');
 // npm install express-async-errors --save
 
 const userService = {
-
+  // REQUISITO 4
   validate: async (body) => {
   // pra validar, eu segui o exemplo desse site: https://joi.dev/api/?v=17.6.0
     const schema = Joi.object({
@@ -40,6 +40,15 @@ const userService = {
   // gero um novo token pro usuário adicionado
     const token = jwt.sign({ data: user }, JWT_SECRET);
     return token;
+  },
+
+  // REQUISITO 5
+  // https://stackoverflow-com.translate.goog/questions/31679838/sequelizejs-findall-exclude-field?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=sc
+  getAll: async () => {
+    const users = await User.findAll({
+      attributes: { exclude: ['password'] },
+    });
+    return users;
   },
 };
 
