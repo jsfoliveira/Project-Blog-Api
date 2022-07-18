@@ -3,6 +3,7 @@ const login = require('./routes/login');
 const user = require('./routes/user');
 const getAll = require('./routes/user');
 const getById = require('./routes/user');
+const category = require('./routes/category');
 
 // ...
 
@@ -22,6 +23,8 @@ app.use((err, req, res, _next) => {
 app.use('/user', getAll);
 
 app.use('/user/:id', getById);
+
+app.use('/categories', category);
 // ...
 
 // É importante exportar a constante `app`,
