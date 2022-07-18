@@ -50,6 +50,15 @@ const userService = {
     });
     return users;
   },
+  // REQUISITO 6: eu preciso buscar o primeiro user com o id correspondente e excluir o password. Como não pode listar um user inexistente, eu faço a condicional abaixo.
+ getById: async (id) => {
+    const user = await User.findOne({
+      where: { id },
+      attributes: { exclude: ['password'] },
+    });
+    if (!user) return null;
+    return user;
+  },
 };
 
 module.exports = userService; 

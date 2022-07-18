@@ -2,6 +2,7 @@ const express = require('express');
 const login = require('./routes/login');
 const user = require('./routes/user');
 const getAll = require('./routes/user');
+const getById = require('./routes/user');
 
 // ...
 
@@ -19,6 +20,8 @@ app.use((err, req, res, _next) => {
 });
 
 app.use('/user', getAll);
+
+app.use('/user/:id', getById);
 // ...
 
 // É importante exportar a constante `app`,
