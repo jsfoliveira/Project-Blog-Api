@@ -14,9 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false,
     tableName: "Users",
   });
-  // User.associate = (models) => {
-  //   User.hasMany(models.BlogPosts, { foreignKey: 'userid', as: 'blogposts' });
-  // };
+  // Será validado que o modelo em 'user.js', define a associação 'hasMany', com a entidade de nome 'BlogPost'.
+  User.associate = (models) => {
+    User.hasMany(models.BlogPost, { foreignKey: 'userid', as: 'blogposts' });
+  };
 
 
   return User;
