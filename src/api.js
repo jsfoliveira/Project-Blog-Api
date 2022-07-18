@@ -4,6 +4,7 @@ const user = require('./routes/user');
 const getAll = require('./routes/user');
 const getById = require('./routes/user');
 const category = require('./routes/category');
+const getAllCategory = require('./routes/category');
 
 // ...
 
@@ -25,6 +26,8 @@ app.use('/user', getAll);
 app.use('/user/:id', getById);
 
 app.use('/categories', category);
+
+app.use('/categories', getAllCategory);
 // ...
 
 // É importante exportar a constante `app`,

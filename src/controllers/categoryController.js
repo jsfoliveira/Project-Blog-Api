@@ -10,6 +10,12 @@ const categoryController = {
       res.status(201).json(categoryCreated);
     }
   },
+
+  getAll: async (req, res) => {
+    const category = await categoryService.getAll();
+
+    return res.status(200).json(category);
+  },
 };
 
 module.exports = categoryController;
