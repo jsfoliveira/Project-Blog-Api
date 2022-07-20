@@ -38,7 +38,7 @@ const userService = {
 
   newToken: async (user) => {
   // gero um novo token pro usuário adicionado
-    const token = jwt.sign({ data: user }, JWT_SECRET);
+    const token = jwt.sign({ data: user }, JWT_SECRET, { expiresIn: '15d' });
     return token;
   },
 

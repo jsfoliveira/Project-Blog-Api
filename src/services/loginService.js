@@ -9,7 +9,7 @@ const loginService = {
     const user = await User.findOne({ where: { email } });
     if (!user) return null;
 
-    return jwt.sign({ data: email }, JWT_SECRET);
+    return jwt.sign({ data: email }, JWT_SECRET, { expiresIn: '15d' });
   },
 };
 

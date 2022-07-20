@@ -6,4 +6,6 @@ const user = Router();
 
 user.get('/', validateToken.validateToken, blogPostController.getAll);
 
+user.get('/:id', validateToken.validateToken, blogPostController.getById);
+
 module.exports = user;
