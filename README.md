@@ -29,7 +29,6 @@ No trabalho do desenvolvimento de software a gente sempre tem prazos, muitas vez
 Por outro lado, eu não quero criar algo que não entendo perfeitamente, como também fazer códigos rápidos pode levar a erros que podem demorar muito pra corrigir.<br>
 Por isso, usei e sempre uso o método Baby Steps, que é uma estratégia de abordar o desafio passo à passo, defensivamente.<br>
 Baby steps é um termo em inglês que quer dizer passos de bebê. Refere-se a fazer as coisas, quaisquer que sejam, devagar, com calma, passo a passo.
-#### :footprints:Requisito 1- Crie endpoints para listar produtos
 
 # Requisitos Obrigatórios
 #### :footprints:Requisito 1 - Crie migrations para as entidades Users, Categories, BlogPosts, PostCategories
